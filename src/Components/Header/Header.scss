@@ -1,0 +1,41 @@
+@import '../../Styles/_style.scss';
+
+.header {
+    // font-family: Helvetica;
+    width: 100%;
+    height: 46px;
+    background-color: #FFFFFF;
+    display: flex;
+    
+    .mobile_menu_button {
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        left: 20px;
+        top: 11px;
+    }
+
+    .logo {
+        width: 33px;
+        height: 32px;
+        top: 7px;
+        @extend .centered;
+    }
+
+    .right_header {
+        width: 100xp;
+        display: flex;
+        gap: 20px;
+        margin-top: 13px;
+        margin-right: 20px;
+        margin-left: auto; 
+
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
