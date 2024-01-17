@@ -20,12 +20,15 @@ const Header = () => {
           <a className='sml_desktop'>Restaurants</a>
           <a className='sml_desktop'>Chefs</a>
         </div>
+        {/* TODO: fix links location in desktop */}
 
         <div className='right_header'>
           <img className='icon' src={magnifying_glass} alt='search'/>
           <img className='icon' src={icon} alt='icon'/>
           <img className='icon' src={shopping_bag} alt='shopping bag'/>
         </div>
+
+        {/* TODO: add search field (for mobile: when search icon is clicked) */}
 
       </header>
     </div>

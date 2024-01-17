@@ -7,46 +7,82 @@
 
 @mixin desktop {
     @media screen and (min-width: 600px) {
-      @content
+      @content;
     }
 }
 
-.h1_desktop {
-    color: #000;
+@mixin font_styling {
     font-family: Helvetica Neue;
-    font-size: 30px;
+    color: #000;
+    line-height: normal;
+    font-weight: 200;
     font-style: normal;
+}
+
+
+/////////////// Desktop font styles ///////////////
+
+@mixin h1_desktop {
+    @include font_styling;
+    font-size: 30px;
     font-weight: 400;
-    line-height: 47px; /* 156.667% */
+    line-height: 47px;
     letter-spacing: 2.67px;
 }
 
-.big_desktop {
-    color: #000;
-    font-family: Helvetica Neue;
+@mixin extra_big_desktop {
+    @include font_styling;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 1.97px;
+}
+
+@mixin big_desktop {
+    @include font_styling;
     font-size: 27px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: normal;
     letter-spacing: 1.35px;
 }
 
-.medium_desktop {
-    color: #000;
-    font-family: Helvetica Neue;
+@mixin medium_desktop {
+    @include font_styling;
     font-size: 24px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: normal;
     letter-spacing: 1.29px;
 }
 
-.sml_desktop {
-    color: #000;
-    font-family: Helvetica Neue;
+@mixin sml_desktop {
+    @include font_styling;
     font-size: 24px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: 30px; /* 125% */
+    line-height: 30px;
     letter-spacing: 1.97px;
+}
+
+
+/////////////// Mobile font styles ///////////////
+
+@mixin h1_mobile {
+    @include font_styling;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 47px;
+    letter-spacing: 2.67px;
+}
+
+@mixin big_mobile {
+    @include font_styling;
+    font-size: 22px;
+    line-height: 32px; 
+    letter-spacing: 1.97px;
+}
+
+@mixin medium_mobile {
+    @include font_styling;
+    font-size: 12px;
+    letter-spacing: 1.29px;
+}
+
+@mixin sml_mobile {
+    @include font_styling;
+    // font-size: 24px;
+    // line-height: 30px;
+    // letter-spacing: 1.97px;
 }
