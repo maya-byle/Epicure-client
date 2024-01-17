@@ -1,41 +1,71 @@
 @import '../../Styles/_style.scss';
 
+.centerVertically {
+    top: 50%;  // Center vertically
+    transform: translateY(-50%);  // Adjust to center precisely
+}
+
 .header {
-    // font-family: Helvetica;
+    background-color: aqua; //#FFFFFF;
     width: 100%;
     height: 46px;
-    background-color: #FFFFFF;
     display: flex;
+    align-items: center;
+    @include desktop {
+        height: 64px;
+        gap: 32px;
+    }
     
     .mobile_menu_button {
-        align-items: center;
-        justify-content: center;
         width: 24px;
         height: 24px;
-        position: relative;
+        position: absolute;
         left: 20px;
         top: 11px;
+        @include desktop {
+            display: none;
+        }
     }
 
     .logo {
         width: 33px;
         height: 32px;
-        top: 7px;
         @extend .centered;
+
+        @include desktop {
+            position: relative;
+            left: 127px;
+            transform: none;
+        }
+    }
+
+    .links_container {
+        display: none;
+
+        @include desktop {
+            display: flex;
+            height: 22px;
+            gap: 32px;
+        }
     }
 
     .right_header {
-        width: 100xp;
         display: flex;
         gap: 20px;
-        margin-top: 13px;
         margin-right: 20px;
         margin-left: auto; 
-
+        @include desktop {
+            margin-right: 127px;
+        }
 
         .icon {
             width: 20px;
             height: 20px;
+
+            @include desktop {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 }
