@@ -7,6 +7,12 @@ import icon from '../../Assets/svg/icon.svg'
 import shopping_bag from '../../Assets/svg/shopping_bag.svg'
 
 const Header = () => {
+  const headerLinks = [
+    {key:1 ,className:'big_desktop' ,text:'EPICURE'},
+    {key:2 ,className:'sml_desktop' ,text:'Restaurants'},
+    {key:3 ,className:'sml_desktop' ,text:'Chefs'}
+  ];
+
   return (
     <div>
       <header className="header">
@@ -16,11 +22,12 @@ const Header = () => {
         <img className='logo' src={logo} alt='logo'/>
 
         <div className='links_container'>
-          <a className='big_desktop'>EPICURE</a>
-          <a className='sml_desktop'>Restaurants</a>
-          <a className='sml_desktop'>Chefs</a>
+          {headerLinks.map((link) => (
+            <a key={link.key} className={link.className}>
+              {link.text}
+            </a>
+          ))}
         </div>
-        {/* TODO: fix links location in desktop */}
 
         <div className='right_header'>
           <img className='icon' src={magnifying_glass} alt='search'/>

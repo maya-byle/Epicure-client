@@ -1,9 +1,9 @@
 @import '../../Styles/_style.scss';
 
-.centerVertically {
-    top: 50%;  // Center vertically
-    transform: translateY(-50%);  // Adjust to center precisely
-}
+// .centerVertically {
+//     top: 50%;  // Center vertically
+//     transform: translateY(-50%);  // Adjust to center precisely
+// }
 
 .header {
     // background-color: aqua; //#FFFFFF;
@@ -30,12 +30,13 @@
     .logo {
         width: 33px;
         height: 32px;
-        @extend .centered;
-
         @include desktop {
-            position: relative;
-            left: 127px;
-            transform: none;
+            margin-left: 127px;
+        }
+        @include mobile {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 

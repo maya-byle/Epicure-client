@@ -48,8 +48,8 @@
                 gap: 16px;
             }
 
-            .medium_font {
-                @include medium_mobile;
+            .sml_font {
+                @include sml_mobile;
                 @include desktop {
                     @include medium_desktop;
                     width: 405px;

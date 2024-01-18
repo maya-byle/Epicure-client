@@ -1,13 +1,18 @@
 import React from 'react';
-import './App.css';
-import Header from './Components/Header/Header';
-import HeroTitle from './Components/HeroTitle/HeroTitle';
+import './App.scss';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from './Pages/HomePage';
+
 
 function App() {
+
+  const router = createBrowserRouter([
+    { path: "/", element: <HomePage /> },
+  ])
+
   return (
     <div className="App">
-      <Header></Header>
-      <HeroTitle></HeroTitle>
+      <RouterProvider router={router}/>
     </div>
   );
 }
