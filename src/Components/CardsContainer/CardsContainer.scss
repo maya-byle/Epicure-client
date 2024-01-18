@@ -33,7 +33,7 @@
 
         .medium_font_not_apper {
             @include medium_mobile;
-            line-height: 35px; /* 218.75% */
+            line-height: 35px;
             letter-spacing: 2px;
             font-weight: 400;
         }

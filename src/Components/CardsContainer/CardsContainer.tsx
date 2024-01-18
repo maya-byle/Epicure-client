@@ -5,7 +5,6 @@ import arrow from '../../Assets/svg/arrow.svg';
 import Card, {CardType} from '../Card/Card';
 
 function CardsContainer(container: {title: string, cards: CardType[]}) {
-
     return ( 
         <div className='cards_container'>
             <h2 className='medium_font'>{container.title}</h2> 
@@ -15,7 +14,10 @@ function CardsContainer(container: {title: string, cards: CardType[]}) {
                         key={card.title}
                         img={card.img}
                         title={card.title}
-                        subTitle={card.subTitle} 
+                        subTitle={card.subTitle}
+                        desc={card.desc}
+                        foodIcon={card.foodIcon}
+                        price={card.price}
                     />
                 ))}
             </div>
