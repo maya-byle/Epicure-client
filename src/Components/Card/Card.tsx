@@ -1,7 +1,7 @@
 // import * as React from 'react';
 import './Card.scss';
 
-interface CardProps {
+export interface CardType {
     img: string;
     title: string;
     subTitle: string;
@@ -10,7 +10,7 @@ interface CardProps {
     price?: number;
 }
 
-function Card(props: CardProps) {
+function Card(props: CardType) {
     return (
         <div className="card">
             <img className='card_img' src={props.img} alt={props.title}/>

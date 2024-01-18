@@ -5,44 +5,40 @@ import nithanthai from "../Assets/png/restaurants/nithan-thai.png";
 import tigerlily from "../Assets/png/restaurants/tiger-lily.png";
 import yapan from "../Assets/png/restaurants/Yapan.png";
 
-export interface Restaurant {
-  name: string;
-  chef: string;
-  img: string;
-}
+import { CardType } from "../Components/Card/Card";
 
-const container: { title: string; cards: Restaurant[] } = {
+const container: { title: string; cards: CardType[] } = {
   title: "popular restaurant in epicure:",
   cards: [
     {
-      name: "Claro",
-      chef: "Ran Shmueli",
+      title: "Claro",
+      subTitle: "Ran Shmueli",
       img: claro,
     },
-    // { name: "Lumia", chef: "Meir", img: "" },
+    // { title: "Lumia", subTitle: "Meir", img: "" },
     {
-      name: "Kab Kem",
-      chef: "Yariv Malili",
+      title: "Kab Kem",
+      subTitle: "Yariv Malili",
       img: kabkem,
     },
     {
-      name: "Messa",
-      chef: "Aviv Moshe",
+      title: "Messa",
+      subTitle: "Aviv Moshe",
       img: messa,
     },
     {
-      name: "Nitan Thai",
-      chef: "Shahaf Shabtay",
+      title: "Nitan Thai",
+      subTitle: "Shahaf Shabtay",
       img: nithanthai,
     },
     {
-      name: "Tiger Lilly",
-      chef: "Yanir Green",
+      title: "Tiger Lilly",
+      subTitle: "Yanir Green",
       img: tigerlily,
     },
     {
-      name: "Ya Pan",
-      chef: "Yuval Ben Moshe",
+      title: "Ya Pan",
+      subTitle: "Yuval Ben Moshe",
       img: yapan,
     },
   ],
