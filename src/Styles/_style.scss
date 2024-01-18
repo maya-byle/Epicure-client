@@ -1,0 +1,94 @@
+/* reusable centering class */
+.centered {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin desktop {
+    @media screen and (min-width: 600px) {
+      @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 599px) {
+      @content;
+    }
+}
+
+@mixin font_styling {
+    font-family: Helvetica Neue;
+    color: #000;
+    line-height: normal;
+    font-weight: 200;
+    font-style: normal;
+    margin: 0px;
+}
+
+
+/////////////// Desktop font styles ///////////////
+
+@mixin h1_desktop {
+    @include font_styling;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 47px;
+    letter-spacing: 2.67px;
+}
+
+@mixin extra_big_desktop {
+    @include font_styling;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 1.97px;
+}
+
+@mixin big_desktop {
+    @include font_styling;
+    font-size: 27px;
+    letter-spacing: 1.35px;
+}
+
+@mixin medium_desktop {
+    @include font_styling;
+    font-size: 24px;
+    letter-spacing: 1.29px;
+}
+
+@mixin sml_desktop {
+    @include font_styling;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 1.97px;
+}
+
+
+/////////////// Mobile font styles ///////////////
+
+@mixin h1_mobile {
+    @include font_styling;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 47px;
+    letter-spacing: 2.67px;
+}
+
+@mixin big_mobile {
+    @include font_styling;
+    font-size: 22px;
+    line-height: 32px; 
+    letter-spacing: 1.97px;
+}
+
+@mixin medium_mobile {
+    @include font_styling;
+    font-size: 18px;
+    letter-spacing: 1.25px;
+}
+
+@mixin sml_mobile {
+    @include font_styling;
+    font-size: 12px;
+    letter-spacing: 1.29px;
+}

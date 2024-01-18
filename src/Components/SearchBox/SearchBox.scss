@@ -1,0 +1,61 @@
+@import '../../Styles/_style.scss';
+
+.search_box_container {
+    background: rgba(255, 255, 255, 0.88);
+    width: 335px;
+    height: 144px;
+    
+    @include desktop {
+        width: 776px;
+        height: 221px;
+    }
+
+    .content_container {
+        width: 315px;
+        padding: 10px 16px;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+
+        @include desktop {
+            width: 405px;
+            height: 149px;
+            padding: 36px 186px;
+        }
+
+        .big_font {
+            @include big_mobile;
+            @include desktop {
+                @include extra_big_desktop;
+            }
+        }
+
+        .search_input {
+            display: flex;
+            // width: 315px;
+            height: 30px;
+            align-items: center;
+            gap: 8px;
+            border-radius: 4px;
+            border: 0.5px solid #000;
+            padding: 6px 12px;
+
+            @include desktop {
+                // width: 505px;
+                height: 48px;
+                gap: 16px;
+            }
+
+            .sml_font {
+                @include sml_mobile;
+                @include desktop {
+                    @include medium_desktop;
+                    width: 405px;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,49 @@
+@import '../../Styles/style';
+
+.cards_container {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-left: 20px;  //TODO: fix it so it will adjust to page size
+    box-sizing:border-box;
+
+    .medium_font {
+        @include medium_mobile;
+        text-transform: uppercase;
+    }
+
+    .cards {
+        display: flex;
+        overflow-x: auto; 
+        gap: 16px;  
+
+        -ms-overflow-style: none;  /* IE and Edge specific: Hide the scrollbar */
+        scrollbar-width: none;  /* Firefox specific: Hide the scrollbar */
+        &::-webkit-scrollbar {
+            display: none;  /* Webkit (Chrome, Safari) specific: Hide the scrollbar */
+        }
+    }
+
+    .more_container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .medium_font_not_apper {
+            @include medium_mobile;
+            line-height: 35px;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        .arrow {
+            width: 24px;
+            height: 24px;
+            padding: 3px 0px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
