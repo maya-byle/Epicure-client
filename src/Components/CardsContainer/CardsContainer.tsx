@@ -9,6 +9,7 @@ function CardsContainer(container: {title: string, cards: CardType[]}) {
         <div className='cards_container'>
             <h2 className='medium_font'>{container.title}</h2> 
             <div className='cards'>
+                {/* TODO: show inly 3 restaurants for desktop */}
                 {container.cards.map((card: CardType) => (
                     <Card
                         key={card.title}

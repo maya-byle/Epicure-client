@@ -35,10 +35,15 @@
         display: flex;
         gap: 16px;  
         overflow-x: auto; 
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+
+        -ms-overflow-style: none;  /* IE and Edge specific: Hide the scrollbar */
+        scrollbar-width: none;  /* Firefox specific: Hide the scrollbar */
         &::-webkit-scrollbar {
-            display: none;
+            display: none;  /* Webkit (Chrome, Safari) specific: Hide the scrollbar */
+        }
+
+        @include desktop {
+            gap: 24px;
         }
     }
 
