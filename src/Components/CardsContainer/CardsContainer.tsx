@@ -15,7 +15,7 @@ function CardsContainer(container: {title: string, cards: CardType[]}) {
                         img={card.img}
                         title={card.title}
                         subTitle={card.subTitle}
-                        desc={card.desc}
+                        stars={card.stars}
                         foodIcon={card.foodIcon}
                         price={card.price}
                     />
