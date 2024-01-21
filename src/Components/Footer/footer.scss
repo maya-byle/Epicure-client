@@ -1,13 +1,26 @@
 @import '../../Styles/style';
 
 .footer {
-    padding: 0px 232px 24px 19px;
+    padding: 20px 232px 24px 19px;
+    display: flex;
+
+    @include desktop {
+        height: 60px;
+        padding: 31px;
+        flex-direction: column;
+        // justify-content: center;
+    }
     
     .links {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: flex-start;
+        display: flex;
+        align-self: center;
         gap: 40px;
+
+        @include mobile {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
         .link {
             width: max-content;

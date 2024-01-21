@@ -17,17 +17,17 @@ import yossiRestaurantsInfo from '../Constants/yossiRestaurants';
 const HomePage = () => {
     return(
         <div className="homePage">
-            <Header></Header>
+            <Header/>
             <div className="feed">
-                <HeroTitle></HeroTitle>
+                <HeroTitle/>
                 <CardsContainer container={restaurantsInfo} styles={{ isBig: true, isCentered: true }}/>
                 <CardsContainer container={dishesInfo} styles={{ isBig: true, isCentered: true }}/>
                 <Icons icons={iconsInfo}/>
                 <ChefInfo/>
                 <CardsContainer container={yossiRestaurantsInfo} styles={{ isBig: false, isCentered: false }}/>
                 <AboutUs/>
-                <Footer/>
             </div>
+            <Footer/>
         </div>
     )
 }
