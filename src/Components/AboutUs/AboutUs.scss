@@ -39,6 +39,7 @@
     .btns {
         display: flex;
         gap: 16px;
+        margin-bottom: 48px;
 
         @include mobile {
             flex-direction: column;
