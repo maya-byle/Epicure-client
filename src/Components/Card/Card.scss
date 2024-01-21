@@ -9,6 +9,10 @@
 
     @include desktop {
         width: 379px;
+
+        &.small {
+            width: 231px;
+        }
     }
 
     .card_img {
@@ -35,9 +39,6 @@
             align-self: stretch;
             text-align: center;
             padding: 24px 0px 8px 0px;
-            // flex: 1 0 0;
-            // align-self: stretch;
-
         }
 
         .medium_bold_font {
@@ -46,6 +47,11 @@
 
             @include desktop {
                 @include h1_desktop;
+                &.small {
+                    font-size: 30px;
+                    line-height: 47px; /* 156.667% */
+                    letter-spacing: 2.67px;
+                }
             }
         }
 

@@ -7,7 +7,7 @@ import icon from '../../Assets/svg/icon.svg'
 import shopping_bag from '../../Assets/svg/shopping_bag.svg'
 
 const Header = () => {
-  const headerLinks = [
+  const headerLinks: {key:number, className:string, text:string}[] = [
     {key:1 ,className:'big_desktop' ,text:'EPICURE'},
     {key:2 ,className:'sml_desktop' ,text:'Restaurants'},
     {key:3 ,className:'sml_desktop' ,text:'Chefs'}

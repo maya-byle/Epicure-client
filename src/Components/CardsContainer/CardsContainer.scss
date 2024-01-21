@@ -15,6 +15,7 @@
     @include desktop {
         align-items: center;
         gap: 40px;
+        padding: 0 127px;
     }
 
     .medium_font {
@@ -34,17 +35,30 @@
     .cards {
         display: flex;
         gap: 16px;  
-        overflow-x: auto; 
-
-        -ms-overflow-style: none;  /* IE and Edge specific: Hide the scrollbar */
-        scrollbar-width: none;  /* Firefox specific: Hide the scrollbar */
-        &::-webkit-scrollbar {
-            display: none;  /* Webkit (Chrome, Safari) specific: Hide the scrollbar */
+        
+        @include mobile {
+            overflow-x: auto; 
+            -ms-overflow-style: none;  /* IE and Edge specific: Hide the scrollbar */
+            scrollbar-width: none;  /* Firefox specific: Hide the scrollbar */
+            &::-webkit-scrollbar {
+                display: none;  /* Webkit (Chrome, Safari) specific: Hide the scrollbar */
+            }
         }
 
         @include desktop {
-            gap: 24px;
-        }
+            flex: 1; /* Make all cards take up equal height */
+            overflow: hidden; /* Hide overflow content */
+
+            &.big {
+                align-items: center;
+                gap: 24px;
+            }
+      
+            &.small {
+                align-self: flex-start;
+                gap: 16px;
+            }
+          }
     }
 
     .more_container {
@@ -56,6 +70,10 @@
             justify-content: flex-end;
             align-items: flex-end;
             // TODO: fix 'All restaurants to the right'
+
+            &.small {
+                display: none
+            }
         }
 
         .medium_font_not_apper {
