@@ -1,0 +1,13 @@
+@import '../Styles/style';
+
+.homePage{
+    .feed {
+        display: flex; 
+        flex-direction: column; 
+        gap: 48px;    
+
+        @include desktop {
+            gap: 80px;
+        }
+    }
+}
