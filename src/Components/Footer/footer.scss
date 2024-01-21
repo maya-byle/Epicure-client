@@ -1,0 +1,23 @@
+@import '../../Styles/style';
+
+.footer {
+    padding: 0px 232px 24px 19px;
+    
+    .links {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+
+        .link {
+            width: max-content;
+            color: #000;
+            font-family: "Helvetica Neue";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 200;
+            line-height: normal;
+            letter-spacing: 1.92px;
+        }
+    }
+}

@@ -7,6 +7,7 @@ import CardsContainer from "../Components/CardsContainer/CardsContainer";
 import Icons from "../Components/Icons/Icons";
 import ChefInfo from "../Components/ChefInfo/ChefInfo";
 import AboutUs from "../Components/AboutUs/AboutUs";
+import Footer from "../Components/Footer/Footer";
 
 import restaurantsInfo from '../Constants/resturants';
 import dishesInfo from '../Constants/dishes';
@@ -25,6 +26,7 @@ const HomePage = () => {
                 <ChefInfo/>
                 <CardsContainer container={yossiRestaurantsInfo} styles={{ isBig: false, isCentered: false }}/>
                 <AboutUs/>
+                <Footer/>
             </div>
         </div>
     )
