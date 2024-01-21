@@ -1,28 +1,49 @@
 @import '../../Styles/style';
 
 .cards_container {
-    width: 100%;
+    width: 100vw;
     background-color: white;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     gap: 18px;
-    margin-left: 20px;  //TODO: fix it so it will adjust to page size
-    box-sizing:border-box;
+
+    @include mobile {
+        margin-left: 20px;  //TODO: fix it so it will adjust to page size
+    }
+
+    @include desktop {
+        align-items: center;
+        gap: 40px;
+    }
 
     .medium_font {
         @include medium_mobile;
         text-transform: uppercase;
+        align-items: center;
+
+        @include desktop {
+            text-align: center;
+            @include font_styling;
+            font-size: 30px;
+            letter-spacing: 1.25px;
+            line-height: 35px;
+        }
     }
 
     .cards {
         display: flex;
-        overflow-x: auto; 
         gap: 16px;  
+        overflow-x: auto; 
 
         -ms-overflow-style: none;  /* IE and Edge specific: Hide the scrollbar */
         scrollbar-width: none;  /* Firefox specific: Hide the scrollbar */
         &::-webkit-scrollbar {
             display: none;  /* Webkit (Chrome, Safari) specific: Hide the scrollbar */
+        }
+
+        @include desktop {
+            gap: 24px;
         }
     }
 
@@ -31,11 +52,24 @@
         align-items: center;
         gap: 12px;
 
+        @include desktop {
+            justify-content: flex-end;
+            align-items: flex-end;
+            // TODO: fix 'All restaurants to the right'
+        }
+
         .medium_font_not_apper {
             @include medium_mobile;
             line-height: 35px;
             letter-spacing: 2px;
             font-weight: 400;
+
+            @include desktop {
+                text-align: right;
+                font-size: 24px;
+                line-height: 35px;
+                letter-spacing: 2px;
+            }
         }
 
         .arrow {

@@ -5,7 +5,7 @@ export interface CardType {
     img: string;
     title: string;
     subTitle: string;
-    desc?: string;
+    stars?: string;
     foodIcon?: string;
     price?: number;
 }
@@ -18,7 +18,9 @@ function Card(card: CardType) {
                 <h3 className="medium_bold_font">{card.title}</h3>
                 <h5 className="xsml_font">{card.subTitle}</h5>
                 {/* TODO: add food icon for dish card */}
-                {card.price && <h5 className="xsml_font bold">₪{card.price}</h5>}
+                {card.stars && <img className="rank" src={card.stars} alt='rank'/>}
+                {card.price && <h5 className="xsml_font bold">₪{card.price}</h5>} 
+                {/* TODO: add the grey line icon for the desktop price */}
             </div>
             {/* <Typography size customStyles>
                 asdasdada
