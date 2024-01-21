@@ -21,21 +21,22 @@ function AboutUs() {
     return ( 
         <div className="aboutUs_container">
             <img className='logo' src={logo} alt='logo'/>
-            <div className='btns'>
-                {btns.map((btn) => (
-                    <button className='btn'>
-                        <img className='btn_img' src={btn.img} alt={btn.text2}/>
-                        <div className='btn_text'>
-                            <h5 className='xsml_font'>{btn.text1}</h5>
-                            <h4 className='sml_font'>{btn.text2}</h4>
-                        </div>
-                    <a></a>
-                </button>
-                ))}
-            </div>
-            <div className='about_content'>
-                <header>ABOUT US:</header>
-                <p className='sml_font'>{aboutText}</p>
+            <div className='desktop_container'>
+                <div className='btns'>
+                    {btns.map((btn) => (
+                        <button className='btn'>
+                            <img className='btn_img' src={btn.img} alt={btn.text2}/>
+                            <div className='btn_text'>
+                                <h5 className='xsml_font'>{btn.text1}</h5>
+                                <h4 className='sml_font'>{btn.text2}</h4>
+                            </div>
+                        </button>
+                    ))}
+                </div>
+                <div className='about_content'>
+                    <header>ABOUT US:</header>
+                    <p className='sml_font'>{aboutText}</p>
+                </div>
             </div>
         </div>
      );
