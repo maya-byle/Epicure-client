@@ -19,7 +19,6 @@ const HomePage = () => {
             <Header></Header>
             <div className="feed">
                 <HeroTitle></HeroTitle>
-                {/* <CardsContainer {...restaurantsInfo}/> */}
                 <CardsContainer container={restaurantsInfo} styles={{ isBig: true, isCentered: true }}/>
                 <CardsContainer container={dishesInfo} styles={{ isBig: true, isCentered: true }}/>
                 <Icons icons={iconsInfo}/>
