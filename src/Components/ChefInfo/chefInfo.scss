@@ -1,0 +1,90 @@
+@import '../../Styles/style';
+
+.chefInfo_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    box-sizing: border-box;
+    gap: 16px;
+
+    @include desktop {
+        gap: 40px;
+        margin: 0 129px;
+    }
+
+    @include desktop {
+        .desktop_chef_content {
+            display: flex;
+            gap: 64px;
+        }
+    }
+
+    .medium_font {
+        margin: 0;
+        font-family: "Helvetica Neue";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 35px; 
+        letter-spacing: 1.25px;
+        text-transform: uppercase;    
+        align-self: flex-start; /* Align to the left of the container */
+
+        @include desktop {
+            align-self: center;
+            text-align: center;
+            font-size: 30px;
+        }
+    
+    }
+
+    .img_container {
+        position: relative; // any absolutely positioned child elements of .img_container will be positioned relative to the .img_container
+
+        .chef_img {
+            width: 100%;
+
+            @include desktop {
+                width: 478px;
+                height: 372px;
+            }
+        }
+
+        .chef_name {
+            position: absolute;
+            bottom: 0; /* Position at the bottom of the img_container */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust for centering */
+            align-self: stretch;
+            color: #000;
+            text-align: center;
+            font-family: "Helvetica Neue";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 47px; 
+            letter-spacing: 2.67px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.80);
+        }
+    }
+
+    .sml_font {
+        color: #000;
+        text-align: justify;
+        font-family: "Helvetica Neue";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 28px; /* 155.556% */
+        letter-spacing: 1.25px;   
+        margin: 0;     
+
+        @include desktop {
+            font-size: 24px;
+            line-height: 35px;
+        }
+    }
+}
