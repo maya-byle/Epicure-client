@@ -6,13 +6,13 @@ import HeroTitle from "../Components/HeroTitle/HeroTitle";
 import CardsContainer from "../Components/CardsContainer/CardsContainer";
 import Icons from "../Components/Icons/Icons";
 import ChefInfo from "../Components/ChefInfo/ChefInfo";
+import AboutUs from "../Components/AboutUs/AboutUs";
 
 import restaurantsInfo from '../Constants/resturants';
 import dishesInfo from '../Constants/dishes';
 import iconsInfo from '../Constants/icons';
 import yossiRestaurantsInfo from '../Constants/yossiRestaurants';
 
-import { CardContainer, CardStyle } from "../Components/CardsContainer/CardsContainer";
 const HomePage = () => {
     return(
         <div className="homePage">
@@ -24,6 +24,7 @@ const HomePage = () => {
                 <Icons icons={iconsInfo}/>
                 <ChefInfo/>
                 <CardsContainer container={yossiRestaurantsInfo} styles={{ isBig: false, isCentered: false }}/>
+                <AboutUs/>
             </div>
         </div>
     )
