@@ -30,13 +30,18 @@
     .logo {
         width: 33px;
         height: 32px;
-        @include desktop {
-            margin-left: 127px;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+            transform: rotate(360deg);
         }
+        
         @include mobile {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+        }
+        @include desktop {
+            margin-left: 127px;
         }
     }
 
