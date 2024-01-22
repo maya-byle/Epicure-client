@@ -12,7 +12,8 @@ function AboutUs() {
     
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum no
     eu ipsum. Cras porta malesuada eros.`;
-
+    // TODO: fix new line in the aboutText
+    
     const btns: {img:string, text1:string, text2:string}[] = [
         {img:play, text1:'Get it on', text2: 'Google Play'},
         {img:apple, text1:'Download on the', text2: 'App Store'},
@@ -24,7 +25,7 @@ function AboutUs() {
             <div className='desktop_container'>
                 <div className='btns'>
                     {btns.map((btn) => (
-                        <button className='btn'>
+                        <button className='btn' key={btn.text2}>
                             <img className='btn_img' src={btn.img} alt={btn.text2}/>
                             <div className='btn_text'>
                                 <h5 className='xsml_font'>{btn.text1}</h5>
