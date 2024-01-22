@@ -9,7 +9,7 @@
     gap: 18px;
 
     @include mobile {
-        margin-left: 20px;  //TODO: fix it so it will adjust to page size
+        padding: 0 20px;
     }
 
     @include desktop {
@@ -36,18 +36,19 @@
         display: flex;
         gap: 16px;  
         
-        @include mobile {
-            overflow-x: auto; 
-            -ms-overflow-style: none;  /* IE and Edge specific: Hide the scrollbar */
-            scrollbar-width: none;  /* Firefox specific: Hide the scrollbar */
-            &::-webkit-scrollbar {
-                display: none;  /* Webkit (Chrome, Safari) specific: Hide the scrollbar */
-            }
-        }
+        // @include mobile {
+        //     overflow-x: auto; 
+        //     -ms-overflow-style: none;  /* IE and Edge specific: Hide the scrollbar */
+        //     scrollbar-width: none;  /* Firefox specific: Hide the scrollbar */
+        //     &::-webkit-scrollbar {
+        //         display: none;  /* Webkit (Chrome, Safari) specific: Hide the scrollbar */
+        //     }
+        // }
 
         @include desktop {
             flex: 1; /* Make all cards take up equal height */
             overflow: hidden; /* Hide overflow content */
+            max-width: calc(379px*3 + 16px*2); 
 
             &.big {
                 align-items: center;
@@ -68,9 +69,7 @@
 
         @include desktop {
             justify-content: flex-end;
-            align-items: flex-end;
-            // TODO: fix 'All restaurants to the right'
-
+            width: 100%;
             &.small {
                 display: none
             }

@@ -34,7 +34,7 @@
         }
 
         @include desktop {
-            justify-content: center;
+            justify-content:flex-start;
             align-items: center;
             align-self: stretch;
             text-align: center;
@@ -51,6 +51,7 @@
                     font-size: 30px;
                     line-height: 47px; /* 156.667% */
                     letter-spacing: 2.67px;
+                    height: 94px;
                 }
             }
         }

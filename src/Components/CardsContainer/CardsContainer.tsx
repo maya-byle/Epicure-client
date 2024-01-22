@@ -3,6 +3,7 @@ import './CardsContainer.scss'
 import arrow from '../../Assets/svg/arrow.svg';
 
 import Card, {CardType} from '../Card/Card';
+import SwiperUI from '../UI/SwiperUI';
 
 export interface CardContainer {
     title: string,
@@ -16,24 +17,13 @@ export interface CardStyle {
 
 function CardsContainer({ container, styles }: { container: CardContainer, styles: CardStyle }) {
     const containerStyle: string = styles.isBig ? 'big' : 'small';
-    
+    const isSmallScreen = window.innerWidth < 600;
+
     return ( 
         <div className='cards_container'>
             <h2 className='medium_font'>{container.title}</h2> 
             <div className={`cards ${containerStyle}`}>
-                {/* TODO: show only 3 restaurants for desktop */}
-                {container.cards.map((card: CardType) => (
-                    <Card
-                        key={card.title}
-                        img={card.img}
-                        title={card.title}
-                        subTitle={card.subTitle}
-                        stars={card.stars}
-                        foodIcon={card.foodIcon}
-                        price={card.price}
-                        isBig={containerStyle}
-                    />
-                ))}
+                <SwiperUI cards={container.cards} containerStyle={containerStyle}/>
             </div>
             <div className={`more_container ${containerStyle}`}>
                 <h3 className='medium_font_not_apper'>All restaurants</h3>

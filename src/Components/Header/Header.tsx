@@ -36,8 +36,6 @@ const Header = () => {
           <img className='icon' src={icon} alt='icon'/>
           <img className='icon' src={shopping_bag} alt='shopping bag'/>
         </div>
-
-        {/* TODO: add search field (for mobile: when search icon is clicked) */}
         
       </header>
       </Fade>
