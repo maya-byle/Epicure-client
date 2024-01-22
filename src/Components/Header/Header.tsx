@@ -5,6 +5,7 @@ import logo from '../../Assets/png/logo.png'
 import magnifying_glass from '../../Assets/svg/magnifying_glass.svg'
 import icon from '../../Assets/svg/icon.svg'
 import shopping_bag from '../../Assets/svg/shopping_bag.svg'
+import { Fade } from "react-awesome-reveal";
 
 const Header = () => {
   const headerLinks: {key:number, className:string, text:string}[] = [
@@ -15,8 +16,9 @@ const Header = () => {
 
   return (
     <div>
+      <Fade direction='down' triggerOnce>
       <header className="header">
-
+        
         <img className='mobile_menu_button' src={hamburger} alt='mobile menu'/>
 
         <img className='logo' src={logo} alt='logo'/>
@@ -36,8 +38,9 @@ const Header = () => {
         </div>
 
         {/* TODO: add search field (for mobile: when search icon is clicked) */}
-
+        
       </header>
+      </Fade>
     </div>
   );
 };

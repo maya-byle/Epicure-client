@@ -1,5 +1,6 @@
 import React from "react";
 import './homePage.scss';
+import { Fade } from "react-awesome-reveal";
 
 import Header from "../Components/Header/Header";
 import HeroTitle from "../Components/HeroTitle/HeroTitle";
@@ -18,13 +19,15 @@ const HomePage = () => {
         <div className="homePage">
             <Header></Header>
             <div className="feed">
-                <HeroTitle></HeroTitle>
-                <CardsContainer container={restaurantsInfo} styles={{ isBig: true, isCentered: true }}/>
-                <CardsContainer container={dishesInfo} styles={{ isBig: true, isCentered: true }}/>
-                <Icons icons={iconsInfo}/>
-                <ChefInfo/>
-                <CardsContainer container={yossiRestaurantsInfo} styles={{ isBig: false, isCentered: false }}/>
-                <AboutUs/>
+                <Fade>
+                    <HeroTitle></HeroTitle>
+                    <CardsContainer container={restaurantsInfo} styles={{ isBig: true, isCentered: true }}/>
+                    <CardsContainer container={dishesInfo} styles={{ isBig: true, isCentered: true }}/>
+                    <Icons icons={iconsInfo}/>
+                    <ChefInfo/>
+                    <CardsContainer container={yossiRestaurantsInfo} styles={{ isBig: false, isCentered: false }}/>
+                    <AboutUs/>
+                </Fade>
             </div>
         </div>
     )
