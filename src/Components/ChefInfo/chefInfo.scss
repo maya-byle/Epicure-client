@@ -11,7 +11,7 @@
 
     @include desktop {
         gap: 40px;
-        margin: 0 129px;
+        padding: 0 129px;
     }
 
     @include desktop {
@@ -23,21 +23,17 @@
 
     .medium_font {
         margin: 0;
-        font-family: "Helvetica Neue";
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 200;
+        align-self: flex-start; /* Align to the left of the container */
+        @include font_styling;
         line-height: 35px; 
         letter-spacing: 1.25px;
         text-transform: uppercase;    
-        align-self: flex-start; /* Align to the left of the container */
 
         @include desktop {
             align-self: center;
             text-align: center;
             font-size: 30px;
         }
-    
     }
 
     .img_container {
@@ -54,32 +50,25 @@
 
         .chef_name {
             position: absolute;
-            bottom: 0; /* Position at the bottom of the img_container */
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Adjust for centering */
-            align-self: stretch;
-            color: #000;
-            text-align: center;
-            font-family: "Helvetica Neue";
+            bottom: 0; // Position at the bottom of the img_container
+            width: 100%;
+            background: rgba(255, 255, 255, 0.80);
+            @include font_styling;
             font-size: 18px;
-            font-style: normal;
             font-weight: 400;
             line-height: 47px; 
             letter-spacing: 2.67px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.80);
+
+            @include desktop {
+                font-size: 40px;
+                line-height: 78px;
+            }
         }
     }
 
     .sml_font {
-        color: #000;
-        text-align: justify;
-        font-family: "Helvetica Neue";
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 200;
-        line-height: 28px; /* 155.556% */
-        letter-spacing: 1.25px;   
+        @include medium_mobile;
+        line-height: 28px;
         margin: 0;     
 
         @include desktop {
