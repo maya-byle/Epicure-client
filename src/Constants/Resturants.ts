@@ -21,7 +21,6 @@ const container: { title: string; cards: CardType[] } = {
       img: claro,
       stars: fourStars,
     },
-    // { title: "Lumia", subTitle: "Meir", img: "" },
     {
       title: "Kab Kem",
       subTitle: "Yariv Malili",

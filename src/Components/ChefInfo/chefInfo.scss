@@ -11,7 +11,7 @@
 
     @include desktop {
         gap: 40px;
-        margin: 0 129px;
+        padding: 0 129px;
     }
 
     @include desktop {
@@ -53,11 +53,9 @@
         }
 
         .chef_name {
+            // TODO: fix the chef name position
             position: absolute;
-            bottom: 0; /* Position at the bottom of the img_container */
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Adjust for centering */
-            align-self: stretch;
+            bottom: 0; // Position at the bottom of the img_container
             color: #000;
             text-align: center;
             font-family: "Helvetica Neue";
@@ -68,6 +66,11 @@
             letter-spacing: 2.67px;
             width: 100%;
             background: rgba(255, 255, 255, 0.80);
+
+            @include desktop {
+                font-size: 40px;
+                height: 78px;
+            }
         }
     }
 

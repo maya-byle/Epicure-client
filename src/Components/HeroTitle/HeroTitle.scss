@@ -5,12 +5,9 @@
     background-size: cover;
     width: 100vw;
     height: 273px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    // flex-shrink: 0;
     
     @include desktop{
         height: 696px;

@@ -1,15 +1,14 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+import 'swiper/scss/scrollbar';
 import Card, { CardType } from '../Card/Card';
 
 function SwiperUI( { cards, containerStyle }: { cards: CardType[], containerStyle: string } ) {
     const windowWidth =  window.innerWidth;
-    const slidesPerView = windowWidth >= 600 ? 3 : 1.2;
     const isSmallScreen = windowWidth < 600;
 
     if (!isSmallScreen) {
@@ -31,11 +30,14 @@ function SwiperUI( { cards, containerStyle }: { cards: CardType[], containerStyl
         );
     }
 
+    const slidesPerView = windowWidth >= 600 ? 3 : 1.4;
+
     return ( 
         <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={16}
             slidesPerView={slidesPerView}
+            watchOverflow={true}
         >
             {cards.map((card: CardType) => (
                     <SwiperSlide>

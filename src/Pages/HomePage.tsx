@@ -21,11 +21,11 @@ const HomePage = () => {
             <div className="feed">
                 <Fade>
                     <HeroTitle></HeroTitle>
-                    <CardsContainer container={restaurantsInfo} styles={{ isBig: true, isCentered: true }}/>
-                    <CardsContainer container={dishesInfo} styles={{ isBig: true, isCentered: true }}/>
+                    <CardsContainer container={restaurantsInfo} styles={{ isBig: true, isMore: true }}/>
+                    <CardsContainer container={dishesInfo} styles={{ isBig: true, isMore: false }}/>
                     <Icons icons={iconsInfo}/>
                     <ChefInfo/>
-                    <CardsContainer container={yossiRestaurantsInfo} styles={{ isBig: false, isCentered: false }}/>
+                    <CardsContainer container={yossiRestaurantsInfo} styles={{ isBig: false, isMore: false }}/>
                     <AboutUs/>
                 </Fade>
             </div>
