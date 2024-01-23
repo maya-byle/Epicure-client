@@ -8,6 +8,7 @@ import CardsContainer from "../Components/CardsContainer/CardsContainer";
 import Icons from "../Components/Icons/Icons";
 import ChefInfo from "../Components/ChefInfo/ChefInfo";
 import AboutUs from "../Components/AboutUs/AboutUs";
+import Footer from "../Components/Footer/Footer";
 
 import restaurantsInfo from '../Constants/resturants';
 import dishesInfo from '../Constants/dishes';
@@ -17,7 +18,7 @@ import yossiRestaurantsInfo from '../Constants/yossiRestaurants';
 const HomePage = () => {
     return(
         <div className="homePage">
-            <Header></Header>
+            <Header/>
             <div className="feed">
                 <Fade>
                     <HeroTitle></HeroTitle>
@@ -29,6 +30,7 @@ const HomePage = () => {
                     <AboutUs/>
                 </Fade>
             </div>
+            <Footer/>
         </div>
     )
 }
