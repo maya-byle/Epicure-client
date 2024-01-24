@@ -37,29 +37,31 @@
     }
 
     .img_container {
-        position: relative; // any absolutely positioned child elements of .img_container will be positioned relative to the .img_container
-
+        position: relative;
+    
         .chef_img {
             width: 100%;
-
+    
             @include desktop {
                 width: 478px;
                 height: 372px;
             }
         }
-
+    
         .chef_name {
             position: absolute;
-            bottom: 0; // Position at the bottom of the img_container
+            top: 220px;
             width: 100%;
             background: rgba(255, 255, 255, 0.80);
             @include font_styling;
             font-size: 18px;
             font-weight: 400;
-            line-height: 47px; 
+            line-height: 47px;
             letter-spacing: 2.67px;
-
+            text-align: center;
+    
             @include desktop {
+                top: 300px;
                 font-size: 40px;
                 line-height: 78px;
             }
