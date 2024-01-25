@@ -16,6 +16,7 @@
         align-items: center;
         gap: 40px;
         padding: 0 127px;
+        overflow-x: auto; 
 
         &.small {
             align-items: flex-start;
@@ -28,7 +29,7 @@
 
         @include desktop {
             flex: 1; /* Make all cards take up equal height */
-            overflow: hidden; 
+            overflow-x: hidden; 
             max-width: calc(379px*3 + 16px*2); 
 
             &.big {
