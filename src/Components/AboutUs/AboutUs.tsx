@@ -10,9 +10,7 @@ function AboutUs() {
      turpis suscipit at.  Vestibulum sed massa in magna sodales porta.  Vivamus elit urna, 
     dignissim a vestibulum.
     
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum no
-    eu ipsum. Cras porta malesuada eros.`;
-    // TODO: fix new line in the aboutText
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum no eu ipsum. Cras porta malesuada eros.`;
     
     const btns: {img:string, text1:string, text2:string}[] = [
         {img:play, text1:'Get it on', text2: 'Google Play'},

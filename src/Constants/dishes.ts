@@ -1,5 +1,6 @@
 import claro from "../Assets/png/dishes/claro.png";
 import garbanzoFrito from "../Assets/png/dishes/garbanzoFrito.png";
+import smokedPizza from "../Assets/png/dishes/smokedPizza.png";
 import tamalako from "../Assets/png/dishes/ta-ma-la-ko.png";
 import spicyIcon from "../Assets/svg/Spicy.svg";
 import veganIcon from "../Assets/svg/vegan.svg";
@@ -23,15 +24,22 @@ const container: { title: string; cards: CardType[] } = {
       title: "Garbanzo Frito",
       subTitle:
         "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
-      foodIcon: vegitarianIcon,
-      price: 78,
+      foodIcon: spicyIcon,
+      price: 98,
     },
+    // {
+    //   img: smokedPizza,
+    //   title: "Smoked Pizza",
+    //   subTitle: "Basil dough, cashew butter, demi-glace, bison & radish",
+    //   foodIcon: veganIcon,
+    //   price: 65,
+    // },
     {
       img: tamalako,
       title: "ta ma la ko",
       subTitle:
         "Green Papaya, Mango, Chukka Chili, Mint, Kaffir lime, Cashew, Akaya Cham sauce",
-      foodIcon: veganIcon,
+      foodIcon: vegitarianIcon,
       price: 65,
     },
   ],

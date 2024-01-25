@@ -1,9 +1,9 @@
-import * as React from 'react';
 import './CardsContainer.scss'
 import arrow from '../../Assets/svg/arrow.svg';
 
 import Card, {CardType} from '../Card/Card';
 import SwiperUI from '../UI/SwiperUI';
+import TextUI from '../UI/TextUI';
 
 export interface CardContainer {
     title: string,
@@ -18,16 +18,20 @@ export interface CardStyle {
 function CardsContainer({ container, styles }: { container: CardContainer, styles: CardStyle }) {
     const containerStyle: string = styles.isBig ? 'big' : 'small';
     const isMore: boolean = styles.isMore;
-    const isSmallScreen = window.innerWidth < 600;
+    const isSmallScreen: boolean = window.innerWidth < 600;
 
     return ( 
-        <div className='cards_container'>
-            <h2 className={`medium_font ${containerStyle}`}>{container.title}</h2> 
+        <div className={`cards_container ${containerStyle}`}>
+            <TextUI props={{ className: 'h3', isUpper: containerStyle==='big' ? 'upper' : '' }}>
+                    {container.title}
+            </TextUI>
             <div className={`cards ${containerStyle}`}>
                 <SwiperUI cards={container.cards} containerStyle={containerStyle}/>
             </div>
             {isMore && <div className={`more_container ${containerStyle}`}>
-                <h3 className='medium_font_not_apper'>All restaurants</h3>
+                <TextUI props={{ className: 'h4', isBold: isSmallScreen? 'bold' : ''}}>
+                    All restaurants
+                </TextUI>
                 <img className='arrow' src={arrow} alt='arrow'/>
             </div>}
         </div>

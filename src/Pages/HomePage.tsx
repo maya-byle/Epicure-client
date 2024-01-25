@@ -10,7 +10,7 @@ import ChefInfo from "../Components/ChefInfo/ChefInfo";
 import AboutUs from "../Components/AboutUs/AboutUs";
 import Footer from "../Components/Footer/Footer";
 
-import restaurantsInfo from '../Constants/resturants';
+import restaurantsInfo from '../Constants/Resturants';
 import dishesInfo from '../Constants/dishes';
 import iconsInfo from '../Constants/icons';
 import yossiRestaurantsInfo from '../Constants/yossiRestaurants';

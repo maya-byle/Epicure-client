@@ -16,42 +16,19 @@
         align-items: center;
         gap: 40px;
         padding: 0 127px;
-    }
 
-    .medium_font {
-        @include medium_mobile;
-        text-transform: uppercase;
-        align-items: center;
-
-        @include desktop {
-            text-align: center;
-            @include font_styling;
-            font-size: 30px;
-            letter-spacing: 1.25px;
-            line-height: 35px;
-
-            &.small {
-                align-self: flex-start;
-            }
+        &.small {
+            align-items: flex-start;
         }
     }
 
     .cards {
         display: flex;
         gap: 16px;  
-        
-        // @include mobile {
-        //     overflow-x: auto; 
-        //     -ms-overflow-style: none;  /* IE and Edge specific: Hide the scrollbar */
-        //     scrollbar-width: none;  /* Firefox specific: Hide the scrollbar */
-        //     &::-webkit-scrollbar {
-        //         display: none;  /* Webkit (Chrome, Safari) specific: Hide the scrollbar */
-        //     }
-        // }
 
         @include desktop {
             flex: 1; /* Make all cards take up equal height */
-            overflow: hidden; /* Hide overflow content */
+            overflow: hidden; 
             max-width: calc(379px*3 + 16px*2); 
 
             &.big {
@@ -76,20 +53,6 @@
             width: 100%;
             &.small {
                 display: none
-            }
-        }
-
-        .medium_font_not_apper {
-            @include medium_mobile;
-            line-height: 35px;
-            letter-spacing: 2px;
-            font-weight: 400;
-
-            @include desktop {
-                text-align: right;
-                font-size: 24px;
-                line-height: 35px;
-                letter-spacing: 2px;
             }
         }
 
