@@ -1,4 +1,12 @@
 import './CardsContainer.scss'
+<<<<<<< HEAD
+import { CardContainer, CardStyle } from '../../Types/cardTypes';
+import arrow from '../../Assets/svg/arrow.svg';
+import SwiperUI from '../UI/SwiperUI';
+import TextUI from '../UI/TextUI';
+
+
+=======
 import arrow from '../../Assets/svg/arrow.svg';
 
 import Card, {CardType} from '../Card/Card';
@@ -14,6 +22,7 @@ export interface CardStyle {
     isBig: boolean,
     isMore: boolean,
 }
+>>>>>>> origin/backend
 
 function CardsContainer({ container, styles }: { container: CardContainer, styles: CardStyle }) {
     const containerStyle: string = styles.isBig ? 'big' : 'small';

@@ -9,46 +9,51 @@ import oneStar from "../Assets/svg/3stars.svg";
 import twoStars from "../Assets/svg/3stars.svg";
 import threeStars from "../Assets/svg/3stars.svg";
 import fourStars from "../Assets/svg/4stars.svg";
-
-import { CardType } from "../Components/Card/Card";
+import { CardType } from "../Types/cardTypes";
 
 const container: { title: string; cards: CardType[] } = {
   title: "popular restaurant in epicure:",
   cards: [
     {
-      title: "Claro",
-      subTitle: "Ran Shmueli",
-      img: claro,
+      _id: "1",
+      name: "Claro",
+      description: "Ran Shmueli",
+      image: claro,
       stars: fourStars,
     },
     {
-      title: "Kab Kem",
-      subTitle: "Yariv Malili",
-      img: kabkem,
+      _id: "6",
+      name: "Kab Kem",
+      description: "Yariv Malili",
+      image: kabkem,
       stars: threeStars,
     },
     {
-      title: "Messa",
-      subTitle: "Aviv Moshe",
-      img: messa,
+      _id: "2",
+      name: "Messa",
+      description: "Aviv Moshe",
+      image: messa,
       stars: fourStars,
     },
     {
-      title: "Nitan Thai",
-      subTitle: "Shahaf Shabtay",
-      img: nithanthai,
+      _id: "3",
+      name: "Nitan Thai",
+      description: "Shahaf Shabtay",
+      image: nithanthai,
       stars: oneStar,
     },
     {
-      title: "Tiger Lilly",
-      subTitle: "Yanir Green",
-      img: tigerlily,
+      _id: "4",
+      name: "Tiger Lilly",
+      description: "Yanir Green",
+      image: tigerlily,
       stars: fourStars,
     },
     {
-      title: "Ya Pan",
-      subTitle: "Yuval Ben Moshe",
-      img: yapan,
+      _id: "5",
+      name: "Ya Pan",
+      description: "Yuval Ben Moshe",
+      image: yapan,
       stars: twoStars,
     },
   ],

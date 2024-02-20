@@ -22,6 +22,8 @@ function Icons({ icons }: IconsProps) {
 }
 
 export default Icons;
+<<<<<<< HEAD
+=======
 
 
 // import React from 'react';
@@ -57,3 +59,4 @@ export default Icons;
 // }
 
 // export default Icons;
+>>>>>>> origin/backend

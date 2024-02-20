@@ -5,7 +5,9 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import 'swiper/scss/scrollbar';
-import Card, { CardType } from '../Card/Card';
+import Card from '../Card/Card';
+import { CardType } from '../../Types/cardTypes';
+
 
 function SwiperUI( { cards, containerStyle }: { cards: CardType[], containerStyle: string } ) {
     const windowWidth =  window.innerWidth;
@@ -16,10 +18,10 @@ function SwiperUI( { cards, containerStyle }: { cards: CardType[], containerStyl
             <>
                 {cards.map((card: CardType) => (
                     <Card
-                        key={card.title}
-                        img={card.img}
-                        title={card.title}
-                        subTitle={card.subTitle}
+                        key={card._id}
+                        image={card.image}
+                        name={card.name}
+                        description={card.description}
                         stars={card.stars}
                         foodIcon={card.foodIcon}
                         price={card.price}
@@ -42,10 +44,10 @@ function SwiperUI( { cards, containerStyle }: { cards: CardType[], containerStyl
             {cards.map((card: CardType) => (
                     <SwiperSlide>
                         <Card
-                            key={card.title}
-                            img={card.img}
-                            title={card.title}
-                            subTitle={card.subTitle}
+                            key={card.name}
+                            image={card.image}
+                            name={card.name}
+                            description={card.description}
                             stars={card.stars}
                             foodIcon={card.foodIcon}
                             price={card.price}
