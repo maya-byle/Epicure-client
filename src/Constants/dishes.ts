@@ -5,39 +5,31 @@ import tamalako from "../Assets/png/dishes/ta-ma-la-ko.png";
 import spicyIcon from "../Assets/svg/Spicy.svg";
 import veganIcon from "../Assets/svg/vegan.svg";
 import vegitarianIcon from "../Assets/svg/Vegitarian.svg";
-
-import { CardType } from "../Components/Card/Card";
+import { CardType } from "../Types/cardTypes";
 
 const container: { title: string; cards: CardType[] } = {
   title: "Signature Dish Of:",
   cards: [
     {
-      img: claro,
-      title: "Pad Ki Mao",
-      subTitle:
+      image: claro,
+      name: "Pad Ki Mao",
+      description:
         "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut",
       foodIcon: spicyIcon,
       price: 88,
     },
     {
-      img: garbanzoFrito,
-      title: "Garbanzo Frito",
-      subTitle:
+      image: garbanzoFrito,
+      name: "Garbanzo Frito",
+      description:
         "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
       foodIcon: spicyIcon,
       price: 98,
     },
-    // {
-    //   img: smokedPizza,
-    //   title: "Smoked Pizza",
-    //   subTitle: "Basil dough, cashew butter, demi-glace, bison & radish",
-    //   foodIcon: veganIcon,
-    //   price: 65,
-    // },
     {
-      img: tamalako,
-      title: "ta ma la ko",
-      subTitle:
+      image: tamalako,
+      name: "ta ma la ko",
+      description:
         "Green Papaya, Mango, Chukka Chili, Mint, Kaffir lime, Cashew, Akaya Cham sauce",
       foodIcon: vegitarianIcon,
       price: 65,
