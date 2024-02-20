@@ -6,7 +6,6 @@ import { CardType } from '../../Types/cardTypes';
 function Card(card: CardType) {
     return (
         <div className={`card ${card.isBig}`}>
-
             <img className='card_img' src={card.image} alt={card.name}/>
 
             <div className='card_content'>

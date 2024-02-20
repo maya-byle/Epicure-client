@@ -14,7 +14,7 @@ function TextUI({ props, children }: { props: FontStyle, children: React.ReactNo
             ${props.isBold} 
             ${props.isUpper}`}
         >
-            {children}dsgsd
+            {children}
         </div>
     );
 }

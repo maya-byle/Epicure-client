@@ -8,6 +8,7 @@ import 'swiper/scss/scrollbar';
 import Card from '../Card/Card';
 import { CardType } from '../../Types/cardTypes';
 
+
 function SwiperUI( { cards, containerStyle }: { cards: CardType[], containerStyle: string } ) {
     const windowWidth =  window.innerWidth;
     const isSmallScreen = windowWidth < 600;
