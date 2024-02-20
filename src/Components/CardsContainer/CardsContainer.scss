@@ -28,7 +28,6 @@
         gap: 16px;  
 
         @include desktop {
-            flex: 1; /* Make all cards take up equal height */
             overflow-x: hidden; 
             max-width: calc(379px*3 + 16px*2); 
 
