@@ -1,0 +1,67 @@
+@import '../../Styles/style';
+
+.cards_container {
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 18px;
+
+    @include mobile {
+        padding-left: 20px;
+    }
+
+    @include desktop {
+        align-items: center;
+        gap: 40px;
+        padding: 0 127px;
+        overflow-x: auto; 
+
+        &.small {
+            align-items: flex-start;
+        }
+    }
+
+    .cards {
+        display: flex;
+        gap: 16px;  
+
+        @include desktop {
+            overflow-x: hidden; 
+            max-width: calc(379px*3 + 16px*2); 
+
+            &.big {
+                align-items: center;
+                gap: 24px;
+            }
+      
+            &.small {
+                align-self: flex-start;
+                gap: 16px;
+            }
+          }
+    }
+
+    .more_container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        @include desktop {
+            justify-content: flex-end;
+            width: 100%;
+            &.small {
+                display: none
+            }
+        }
+
+        .arrow {
+            width: 24px;
+            height: 24px;
+            padding: 3px 0px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

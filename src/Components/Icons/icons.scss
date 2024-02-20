@@ -1,0 +1,88 @@
+@import '../../Styles/style';
+
+.icons_container {
+    width: 100vw;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex-shrink: 0;
+    padding: 30px 0px;
+
+    .medium_bold_font {
+        color: #000;
+        font-family: "Helvetica Neue";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 35px;
+        letter-spacing: 1.25px;
+        text-transform: uppercase;
+        margin: 0;
+
+        @include desktop {
+            text-align: center;
+            font-size: 30px;
+            letter-spacing: 2.14px;
+        }
+    }
+
+    .icons_info {
+        display: flex;
+        align-items: center;
+        gap: 56px;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        @include desktop {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .icon {
+            width: 136px;
+            gap: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .icon_img {
+                display: flex;
+                width: 46.42px;
+                height: 35.976px;
+                padding: 0px 0.282px 1.532px 0px;
+                justify-content: center;
+                align-items: center;
+
+                @include desktop {
+                    width: 77.419px;
+                    height: 60px;
+                    padding: 0px 0.471px 2.555px 0px;
+                }
+            }
+    
+            .medium_font {
+                color: #000;
+                text-align: center;
+                font-family: "Helvetica Neue";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 200;
+                line-height: 30px; /* 166.667% */
+                letter-spacing: 1.97px;
+                margin: 0;
+
+                @include desktop {
+                    font-size: 24px;
+                }
+            }
+        }
+
+
+    }
+}

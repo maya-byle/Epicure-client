@@ -1,0 +1,107 @@
+@import '../../Styles/style';
+
+.card {
+    background-color: #F9F4EA;
+    width: 245px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include desktop {
+        width: 379px;
+        justify-content:flex-start;
+        align-items: center;
+        align-self: stretch;
+        text-align: center;
+
+        &.small {
+            width: 231px;
+            justify-content: flex-start;
+        }
+    }
+
+    .card_img {
+        width: inherit;
+        height: 151.804px;
+        @include desktop {
+            height: 234.769px;
+        }
+    }
+
+    .card_content {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+
+        @include mobile {
+            align-items: flex-start;
+        }
+
+        @include desktop {
+            align-items: center;
+            padding: 24px 0px 8px 0px;
+        }
+
+        .desktop_icon_subtitle {
+            display: flex;
+            flex-direction: column;
+
+            @include desktop{
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+
+            .dish_icon {
+                width: 30px;
+                height: 24px;
+                @include desktop {
+                    width: 39.8px;
+                    height: 29.7px;
+                }
+            }
+        }
+
+        .desktop_rank {
+            @include mobile {
+                display: none;
+            }
+            @include desktop {
+                width: 216px;
+                height: 40px;
+                flex-shrink: 0;
+            }
+        }
+
+        .xsml_font {
+            @include sml_mobile;
+
+            @include desktop {
+                @include sml_desktop;
+                padding: 0 40px;
+            }
+            @include mobile {
+                &.bold {
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .price_container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .desktop_grey_line {
+                width: 112px;
+                height: 0.5px;
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+}

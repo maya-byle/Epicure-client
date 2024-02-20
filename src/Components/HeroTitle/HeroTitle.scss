@@ -1,0 +1,15 @@
+@import '../../Styles/_style.scss';
+
+.hero {
+    background-image: url("../../Assets/png/hero-picture.png");
+    background-size: cover;
+    width: 100vw;
+    height: 273px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @include desktop{
+        height: 696px;
+    }
+}
