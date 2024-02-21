@@ -2,6 +2,7 @@ import { CardType } from "../Types/cardTypes";
 import spicyIcon from "../Assets/svg/Spicy.svg";
 import veganIcon from "../Assets/svg/vegan.svg";
 import vegitarianIcon from "../Assets/svg/Vegitarian.svg";
+// import transperent from "../Assets/svg/transperentBackground.jpeg";
 import oneStar from "../Assets/svg/1star.svg";
 import twoStars from "../Assets/svg/2stars.svg";
 import threeStars from "../Assets/svg/3stars.svg";
@@ -17,7 +18,7 @@ export const getFoodIcon = (foodIcon: string): string | undefined => {
     case "Vegi":
       return vegitarianIcon;
     default:
-      return undefined;
+      return "";
   }
 };
 
@@ -73,16 +74,16 @@ export const transformDishes = (dishes: any) => {
 };
 
 export const transformRestaurants = (restaurants: any) => {
-  const newDishes: CardType[] = restaurants.map((restaurant: any) => ({
+  const newRestaurants: CardType[] = restaurants.map((restaurant: any) => ({
     _id: restaurant._id,
     name: restaurant.name,
-    description: restaurant.chef.name,
+    subtitle: restaurant.chef.name,
     image: restaurant.image,
     stars: getRatingImage(restaurant.rank),
   }));
 
   return {
     title: "popular restaurant in epicure:",
-    cards: newDishes,
+    cards: newRestaurants,
   };
 };

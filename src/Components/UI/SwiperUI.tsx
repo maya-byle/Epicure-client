@@ -42,11 +42,12 @@ function SwiperUI( { cards, containerStyle }: { cards: CardType[], containerStyl
             watchOverflow={true}
         >
             {cards.map((card: CardType) => (
-                    <SwiperSlide>
+                    <SwiperSlide key={card._id}>
                         <Card
                             key={card.name}
                             image={card.image}
                             name={card.name}
+                            subtitle={card.subtitle}
                             description={card.description}
                             stars={card.stars}
                             foodIcon={card.foodIcon}

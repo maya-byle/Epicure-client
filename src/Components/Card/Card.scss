@@ -44,9 +44,10 @@
             padding: 24px 0px 8px 0px;
         }
 
-        .desktop_icon_subtitle {
+        .desktop_icon_description {
             display: flex;
             flex-direction: column;
+            gap: 10px;
 
             @include desktop{
                 flex-direction: column-reverse;
@@ -80,8 +81,16 @@
             @include desktop {
                 @include sml_desktop;
                 padding: 0 40px;
+                &.descriptin {
+                    height: 150px;
+                    overflow-y: auto;
+                }
             }
             @include mobile {
+                &.descriptin {
+                    height: 43px;
+                }
+
                 &.bold {
                     font-weight: 400;
                 }

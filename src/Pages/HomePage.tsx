@@ -20,8 +20,8 @@ const HomePage = () => {
     const [restaurants, setRestaurants] = useState([]);
     const [chefOfTheWeek, setChefOfTheWeek] = useState<IChefOfTheWeek>({name:"",description:"",image:"", restaurants:[]});
     const [dishes, setDishes] = useState([]);
-    // const baseURL = "http://localhost:3001/api/v1/" //local
-    const baseURL = "http://ec2-51-20-81-186.eu-north-1.compute.amazonaws.com:3001/api/v1/";
+    const baseURL = "http://localhost:3001/api/v1/" //local
+    // const baseURL = "http://ec2-51-20-81-186.eu-north-1.compute.amazonaws.com:3001/api/v1/";
     
     useEffect(() => {
         const fetchData = async () => {
@@ -42,6 +42,7 @@ const HomePage = () => {
     const chefOfTheWeekRestaurants: CardContainer = transformChefRestaurantsData(chefOfTheWeek.name, chefOfTheWeek.restaurants)
     const dishesInfo: CardContainer = transformDishes(dishes)
     const restaurantsInfo: CardContainer = transformRestaurants(restaurants)
+    console.log(restaurantsInfo)
 
     return(
         <div className="homePage">

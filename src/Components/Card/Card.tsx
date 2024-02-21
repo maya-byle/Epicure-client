@@ -12,8 +12,10 @@ function Card(card: CardType) {
                 <TextUI props={{ className: card.isBig === 'big' ?'h1':'h2', isBold: 'bold' }}>{card.name}</TextUI>
 
                 <div className='desktop_icon_description'>
-                    { card.description && <h5 className="xsml_font">{card.description}</h5> }
-                    { card.foodIcon && <img className='dish_icon' src={card.foodIcon} alt='dish icon'/> }
+                    {card.description && <h5 className="xsml_font descriptin">{card.description}</h5> }
+                    {card.subtitle && <h5 className="xsml_font">{card.subtitle}</h5> }
+                    {card.foodIcon && <img className='dish_icon' src={card.foodIcon} alt='dish icon'/>}
+                    {card.foodIcon === "" && <div className='dish_icon'/>}
                 </div>
 
                 {card.price && <div className='price_container'>

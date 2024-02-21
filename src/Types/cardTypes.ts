@@ -2,6 +2,7 @@ export interface CardType {
   _id?: string;
   image: string;
   name: string;
+  subtitle?: string;
   description?: string;
   stars?: string;
   foodIcon?: string;
