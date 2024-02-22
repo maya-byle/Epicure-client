@@ -46,6 +46,9 @@
                 width: 478px;
                 height: 372px;
             }
+            @include mobile {
+                height: 262px;
+            }
         }
     
         .chef_name {

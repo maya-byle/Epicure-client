@@ -47,7 +47,8 @@
         display: flex;
         align-items: center;
         gap: 12px;
-
+        max-width: calc(379px*3 + 16px*2); 
+        
         @include desktop {
             justify-content: flex-end;
             width: 100%;
