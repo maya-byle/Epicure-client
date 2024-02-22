@@ -53,7 +53,7 @@ const HomePage = () => {
                     <CardsContainer container={restaurantsInfo} styles={{ isBig: true, isMore: true }}/>
                     <CardsContainer container={dishesInfo} styles={{ isBig: true, isMore: false }}/>
                     <Icons icons={iconsInfo}/>
-                    <ChefInfo name={chefOfTheWeek.name} description={chefOfTheWeek.description} image={chefOfTheWeek.image}/>
+                    {chefOfTheWeek && <ChefInfo name={chefOfTheWeek.name} description={chefOfTheWeek.description} image={chefOfTheWeek.image}/>}
                     <CardsContainer container={chefOfTheWeekRestaurants} styles={{ isBig: false, isMore: false }}/>
                     <AboutUs/>
                 </Fade>
