@@ -15,6 +15,7 @@ import axios from "axios";
 import { IChefOfTheWeek } from "../Types/chefTypes";
 import { transformChefRestaurantsData, transformDishes, transformRestaurants } from "../utils/utils";
 import { CardContainer } from "../Types/cardTypes";
+import ScrollBack from "../Components/UI/ScrollBack";
 
 const HomePage = () => {
     const [restaurants, setRestaurants] = useState([]);
@@ -58,6 +59,7 @@ const HomePage = () => {
                     <AboutUs/>
                 </Fade>
             </div>
+            <ScrollBack/>
             <Footer/>
         </div>
     )
