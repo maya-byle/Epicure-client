@@ -2,7 +2,6 @@ import { CardType } from "../Types/cardTypes";
 import spicyIcon from "../Assets/svg/Spicy.svg";
 import veganIcon from "../Assets/svg/vegan.svg";
 import vegitarianIcon from "../Assets/svg/Vegitarian.svg";
-// import transperent from "../Assets/svg/transperentBackground.jpeg";
 import oneStar from "../Assets/svg/1star.svg";
 import twoStars from "../Assets/svg/2stars.svg";
 import threeStars from "../Assets/svg/3stars.svg";
@@ -58,10 +57,12 @@ export const transformChefRestaurantsData = (
 };
 
 export const transformDishes = (dishes: any) => {
+  console.log(dishes)
   const newDishes: CardType[] = dishes.map((dish: any) => ({
     _id: dish._id,
     name: dish.name,
     description: dish.ingredients,
+    restaurant: dish.restaurant.name,
     image: dish.image,
     price: dish.price,
     foodIcon: getFoodIcon(dish.tags[0]),

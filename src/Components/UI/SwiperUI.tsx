@@ -22,6 +22,7 @@ function SwiperUI( { cards, containerStyle }: { cards: CardType[], containerStyl
                         image={card.image}
                         name={card.name}
                         description={card.description}
+                        restaurant={card.restaurant}
                         stars={card.stars}
                         foodIcon={card.foodIcon}
                         price={card.price}

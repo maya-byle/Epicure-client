@@ -4,6 +4,7 @@ export interface CardType {
   name: string;
   subtitle?: string;
   description?: string;
+  restaurant?: string;
   stars?: string;
   foodIcon?: string;
   price?: number;

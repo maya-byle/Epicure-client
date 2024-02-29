@@ -9,6 +9,7 @@ function Card(card: CardType) {
             <img className='card_img' src={card.image} alt={card.name}/>
 
             <div className='card_content'>
+                {card.restaurant && <h6 className='xsml_font'>{card.restaurant}</h6>}
                 <TextUI props={{ className: card.isBig === 'big' ?'h1':'h2', isBold: 'bold' }}>{card.name}</TextUI>
 
                 <div className='desktop_icon_description'>
